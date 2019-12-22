@@ -2,7 +2,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |id|s|null: false|
-|username|string|null: false|
+|name|string|null: false|
 |password|string|null: false|
 |email|string|null: false|
  ### Association
@@ -34,7 +34,6 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text||
 |image|text||
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
