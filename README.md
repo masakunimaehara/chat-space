@@ -37,6 +37,11 @@
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
 
+## photos_tagsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|string||
+
 
 
 
