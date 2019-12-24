@@ -32,15 +32,15 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|text||
+|image|string||
 |text|text|null: false|
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
+### Association
+- belongs_to :group
+- belongs_to :user
 
-## photos_tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|image|string||
+
 
 
 
