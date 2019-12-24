@@ -1,7 +1,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, index|
+|name|string|null: false, index: true|
  ### Association
  - has_many :messages
  - has_many :group_users
@@ -32,7 +32,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|string||
-|text|text|null: false|
+|text|text||
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
 ### Association
