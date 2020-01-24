@@ -41,7 +41,6 @@ $(function(){
  }
 $('#new_message').on('submit', function(e){
  e.preventDefault();
-//  console.log('ok1')
  var formData = new FormData(this);
  var url = $(this).attr('action')
  $.ajax({
@@ -53,14 +52,15 @@ $('#new_message').on('submit', function(e){
    contentType: false
  })
   .done(function(data){
-    // console.log('ok2')
     var html = buildHTML(data);
     $('.messages').append(html);
-    $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});      
+    $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+    $('.form__submit').prop('disabled', false);
     $('form')[0].reset();
   })
   .fail(function(){
     alert('メッセージ送信に失敗しました');
+    $('.form__submit').prop('disabled', false);
   })
 })
 });
